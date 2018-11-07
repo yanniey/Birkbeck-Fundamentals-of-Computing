@@ -1,6 +1,12 @@
 # Fundamentals of Computing
 ## Msc. Data Science at Birkbeck, University of London, 10/2018
 
+### Course Format:
+* On campus: 1.5 hours of lecture and 1.5 hours of lab per week
+* 2 courseworks
+* Written exam in May
+* Final mark = Coursework (20%) + exam (80%)
+
 This course is like playing mind gymnastics. 
 
 ### Two things I learned from this course:
@@ -294,7 +300,38 @@ This course is like playing mind gymnastics.
 
     * Isomorphism may be used to track transactions between nodes (e.g. clients) to detect money-laundering activities. 
 
-## Week 4. Finite state machines (automata)  
+14. Alphabets and words
+    * if `w=xy` then x is a **prefix** of w,and y a **suffix** of w
+        + e.g., `tor` is a prefix and `se` is a suffix of `tortoise`
+        + if `sigma` is empty, then `sigma star` has one element: `sigma`
+
+## Week 4. Finite state machines (automata), Introduction to the Theory of Computation
+This week covers three parts: 
+
+1. Automata theory and Turing machines
+    * Deals with definitions and properties of precise mathematical models of computers and computations
+
+2. Computability theory
+    * What problems computers can and cannot solve? 
+
+3. Complexity theory
+    * What makes some problems computationally hard and others easy?
+
+1. Finite automata or finite-state machines
+    * A finite automata is a theoretical model for programs using a constant amount of memory regardless of the input form
+    * Finite control device: at any moment can be in one of its states. It is hard-wired how it changes from one state to another
+    * Some special states:
+      + one initial state
+      + some accepting states
+    * how a finite automata works:
+        + As the input is finite, at some moment the reading head reaches the end of the input word (that is, the first blank cell).
+        + If at this moment the control device is in one of the accepting states, then the input word is accepted by the automaton.
+        + Otherwise, the input word is not accepted (or rejected)
+    * Deterministic Finite Automaton (DFA)
+        + For every cell in the transition table, there is a unique state. -> for the same input to go through the same transition, the output is the same, thus deterministic.
+        + Configuration: a pair of state plus words, e.g. (q, abba), q is the state, abba is the word
+        + Language and DFAs: DFAs accept certain words, while may reject others. If we collect all words accepted by a DFA A, we obtain the language of A
+
 
 ## Week 5. Nondeterministic automata. Determinism vs. nondeterminism. (Sections 2.2 and 2.3 of "Theory of Computing. A gentle ## Week introduction")  
 
