@@ -317,7 +317,7 @@ This week covers three parts:
 3. Complexity theory
     * What makes some problems computationally hard and others easy?
 
-1. Finite automata or finite-state machines
+4. Finite automata or finite-state machines
     * A finite automata is a theoretical model for programs using a constant amount of memory regardless of the input form
     * Finite control device: at any moment can be in one of its states. It is hard-wired how it changes from one state to another
     * Some special states:
@@ -334,6 +334,41 @@ This week covers three parts:
 
 
 ## Week 5. Nondeterministic automata. Determinism vs. nondeterminism. (Sections 2.2 and 2.3 of "Theory of Computing. A gentle ## Week introduction")  
+
+1. Nondeterminism = multiple output possibilities for the same input
+  It checks all possibile computations. If at least one of them works (i.e. ends up at an accepting stage), then the input is considered accepted.
+
+2. Advantages of non-deterministic automata
+    * Nondeterministic finite automata are **much easier** to design than deterministic ones
+        + They allow us to model how ‘programs’ are built from ‘subprograms’
+    * Whatever can be done by a nondeterministic finite automaton can also be done (though usually in a bit more complicated way) by a deterministic one.
+        + But deterministic automata would be much bigger than that of the deterministic equivalent
+    * In other words, nondeterminism does not increase the computational power of finite automata
+
+3. Characteristics of non-deterministic finite automata (NFA)
+    * There could be no outgoing arrows -> automaton might be stuck there
+    * There could be multiple outgoing arows-> same input, but different output
+    * epsilon jump -> no input, but the status still changed 
+
+4. When is words accepted by NFAs
+  * A word w is accepted by an NFA A if **there exists** a computation of A on input w ending up with a configuration (q, ε), for some favourable state q.
+  * So an NFA can reject an input word because every computation on this input is
+        + either ‘stuck’
+        + or ends up with a configuration (q′, ε), but q′ is not a favourable state.
+
+5. Computation of NFAs
+  * There can be more than one computation on an input word (because for the same input, there can be multiple outputs)
+  * Nondeterminism can be viewed as a kind of parallel computation wherein sev- eral ‘processes’ can be running concurrently.
+
+6. Differences between NFAs and DFAs
+    * There can be more than one arrow labelled by the same symbol coming out of a state (e.g., there are two a-arrows out of r).
+    * There can be no arrow labelled by some symbol coming out of a state (e.g., there is no b-arrow out of q).
+    * There can be arrows labelled by not symbols from the input alphabet but by the empty word ε. These arrows represent ‘jumps’ (e.g. there is a jump from s to q).
+
+7. Equivalent of NFA(Nondeterministic Automata) and DFA(Deterministic Finite Automata)
+    * Two automata A and A′ are said to be equivalent if they accept the same language
+
+
 
 ## Week 6. Regular languages. (Section 2.4 of "Theory of Computing. A gentle introduction")  
 
