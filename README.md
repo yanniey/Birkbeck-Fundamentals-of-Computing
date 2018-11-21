@@ -367,10 +367,30 @@ This week covers three parts:
 
 7. Equivalent of NFA(Nondeterministic Automata) and DFA(Deterministic Finite Automata)
     * Two automata A and A′ are said to be equivalent if they accept the same language
-
+    * In a DFA no choice, no ‘getting stuck’, no `ε-jumps` are allowed
+    * To convert an NFA to DFA, the price is an exponential increase to the size of the automata
+    * DFA makes things more compact (le.g. ess states)
+    * 2^number of states of the original NFA in the worst case
 
 
 ## Week 6. Regular languages. (Section 2.4 of "Theory of Computing. A gentle introduction")  
+
+1. `(a U b)^*` is equal to `{a,b}^*`
+
+2. A **regular language** is any language that is described by a regular expression.
+    * Not all languages are regular
+    * Regular languages are precisely those languages that are accepted by finite automata.
+
+3. Converting regular languages to finite automata
+
+4. Finite automata may be regarded as programs that use fixed amounts of memory (represented by states) regardless of the input.
+
+5. Finite automata can be used as recognition devices: they accept certain inputs and reject others.
+
+6. Nondeterminism does not increase the computational power of finite au- tomata, but nondeterministic automata are easier to design than
+deterministic ones.
+
+7. The languages accepted by finite automata are precisely the regular ones.
 
 ## Week 7. Context-free languages and pushdown automata. (Sections 3.1 and 3.3 of "Theory of Computing. A gentle introduction")   
 
