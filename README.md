@@ -392,7 +392,31 @@ deterministic ones.
 
 7. The languages accepted by finite automata are precisely the regular ones.
 
-## Week 7. Context-free languages and pushdown automata. (Sections 3.1 and 3.3 of "Theory of Computing. A gentle introduction")   
+8. **Pumping lemma**: it says that all sufficiently long words in a regular language may be pumped—that is, have a middle section of the word repeated an arbitrary number of times—to produce a new word that also lies within the same language.
+
+9. 
+
+## Week 7. Context-free languages and pushdown automata. (Sections 3.1 and 3.3 of "Theory of Computing. A gentle introduction") 
+
+1. **Backus-Naur Form(BNF)** is a notation technique used to describe recursively
+the syntax of programming languages, communication protocol et.c
+
+    * BNF notation: `L ::= ε|aLb`
+
+2. Palindromes (a word that reads the same forward and backward, e.g. "eve","madamiamadam")
+
+3. Context-free language
+
+4. Nonpalindromes
+
+5. (nondeterministic) Pushdown automaton (PDA) & stack
+    * Example: Pushdown Automaton for `{a^nb^n |n≥0} `
+        + Read symbols from the input; as each a is read, push it onto the stack
+        + As soon as b’s are seen, pop an a off the stack for each b read
+        + If reading the input is finished exactly when the stack becomes empty, accept the input
+        + Otherwise reject the input
+    * How to test for an empty stack?
+        + Push initially some special symbol, say `⊥` (pronounce "bottom") , on the stack
 
 ## Week 8. Turing machines. (Sections 4.1 and 4.2 of "Theory of Computing. A gentle introduction") 
 
