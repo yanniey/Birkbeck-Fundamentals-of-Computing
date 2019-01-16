@@ -4,10 +4,10 @@
 ### Course Format:
 * On campus: 1.5 hours of lecture and 1.5 hours of lab per week
 * 2 courseworks
-* Written exam in May
+* Written exam in May in Term 2
 * Final mark = Coursework (20%) + exam (80%)
 
-This course is like playing mind gymnastics. 
+This course is not restricted to any specific programming language, but instead focuses on the fundamentals of computing and how we can evaluate performance of programming. 
 
 ### Two things I learned from this course:
 
@@ -422,7 +422,84 @@ the syntax of programming languages, communication protocol et.c
 
 ## Week 9. The halting problem. Undecidable problems. 
 
+
+## Term 2 
+
 ## Week 10. Data structures: representations and operations.  
+1. Data structure should be determined by knowing what type of operation they will undertake (for efficiency purpose).
+
+2. **function** vs **procedure**
+function returns a value, procedure doesn't return a value. 
+
+3. Stack (last-in-first-out)
+All deletions and insertions occur at one end of the list, known as the `top`. 
+
+4. Queue (First-in-first-out)
+All deletions occurt at one end called the `front`, and all insertions at the other end called the `rear` of the list.
+
+5. Deque
+* With a `general deque`, deletion and insertion occur only at the `left` and `right` ends of the list. 
+* With an `input-restricted deque`, deletions occur at both ends but insertions at only one end
+* With an `output-restricted deque`, insertions occur at both ends,  but deletions at only one end. 
+
+6. Stack in linear list opeartion
+
+**STACK(x,y)** -- Insert item y on stack x
+```
+if (T>=M) deal_with_overflow();
+T<-T+1;
+X[T]<-y;
+```
+
+
+**UNSTACK(x,y)** -- Return the top item on stack X, and delete it from the stack
+
+```
+if (T=0)
+  deal_with_underflow();
+else
+  {
+    result <- X[T]
+    T <- T-1
+    return result;
+  }
+```
+
+7. Queue in linear list operation
+
+**QUEUE(x,y)** - Insert a new node y in queue X
+
+`N` counts how many elements are present in the queue.
+`R` is rear.  `F` is front (where the last thing that was deleted was)
+
+Empty queue is when `N=0` and `F=R`
+
+Insert at rear, return/remove the front
+
+```
+if (N=M) deal_with_overflow；
+N<-N+1
+R<-1 if R=M else R+1; set R to 1 if R=M (to wrap it around). Otherwise increase R by 1
+X[R]<-y
+```
+
+**UNQUEUE(x,y)** - Return the front item of queue X and delete it from the queue
+
+```
+if (N = 0)
+  deal_with_underflow();
+else
+  {
+    N <- N-1;
+    F <- 1 if F=M else F+1;
+    return X[F];
+  }
+```
+
+8. Stacks are closely related to parenthesis （because whatever is in the parenthesis is executed first）
+Queues - closely related to printers, operating system processes
+
+
 
 ## Week 11. Lists, trees, forests, binary trees.  
 
